@@ -1,0 +1,48 @@
+npm init --yes
+
+tsc --init
+
+Cambiar en tsconfig.json
+
+"target": "es6",
+Descomentar el outDir y ponerle "./build",
+
+npm i express mongoose morgan helmet cors compression
+
+morgan: ver por consola las peticiones que van llegando 
+helmet: Modulo para seguridad
+cors: Modulo para conectar una app movil o web al backend
+compression: comprimir el peso de las respuestas del back
+
+npm i @types/node @types/mongoose @types/express nodemon typescript -D
+
+tsc para pasar todo de ts -> js
+
+Ejecutar el js generado en build
+
+node build/server.js
+
+npm i @types/morgan
+
+Creacion de scripts:
+
+Compilador de ts
+
+"ts": "tsc -w"
+
+Compilador de js
+
+"dev": "nodemon ./build/server.js",
+
+Arrancar la app en produccion
+
+"start" : "tsc && node ./build/server.js"
+
+npm i @types/helmet
+
+iniciar el server de mongo
+
+mongod
+
+npm i @types/compression @types/cors
+
